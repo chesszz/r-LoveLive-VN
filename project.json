@@ -1,0 +1,6 @@
+{
+  "build_update": false,
+  "packages": ["all"],
+  "add_from": true,
+  "force_recompile": true
+}

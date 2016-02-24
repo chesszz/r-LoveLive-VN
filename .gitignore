@@ -1,0 +1,9 @@
+game/saves
+game/cache
+log.txt
+*.rpyc
+*.bak
+traceback.txt
+.idea/
+tmp/
+log.txt
