@@ -1,0 +1,29 @@
+{
+    "chars": [
+        {"name": "Ahrigateaux",         "nick": "Ahri",    "color": "#00ff00"},
+        {"name": "Ame",                 "nick": "Ame",     "color": "#ffffff"},
+        {"name": "Capsairin",           "nick": "Cap",     "color": "#ffffff"},
+        {"name": "Chezz",               "nick": "Chz",     "color": "#ffffff"},
+        {"name": "chun",                "nick": "Chun",    "color": "#ffffff"},
+        {"name": "cornsplosion",        "nick": "Corn",    "color": "#ffffff"},
+        {"name": "Dalliance",           "nick": "Dal",     "color": "#ffffff"},
+        {"name": "Espoir",              "nick": "Esp",     "color": "#ffffff"},
+        {"name": "headphonezero",       "nick": "zer",     "color": "#ffffff"},
+        {"name": "HeyMiggy",            "nick": "Mig",     "color": "#ff2222"},
+        {"name": "HoshiRin-chan",       "nick": "Rin",     "color": "#00ff00"},
+        {"name": "Insti",               "nick": "Ins",     "color": "#2222ff"},
+        {"name": "-KatZayY-",           "nick": "Kat",     "color": "#ffffff"},
+        {"name": "lakepower",           "nick": "Lake",    "color": "#ffffff"},
+        {"name": "link2110",            "nick": "Link",    "color": "#ff2222"},
+        {"name": "MarcoPolo",           "nick": "MP",      "color": "#00ff33"},
+        {"name": "MasterMirage",        "nick": "MM",      "color": "#00ff00"},
+        {"name": "-melodii-",           "nick": "Mel",     "color": "#ffffff"},
+        {"name": "mochaw1ngz",          "nick": "Moc",     "color": "#ffffff"},
+        {"name": "Oxide",               "nick": "Oxd",     "color": "#ffffff"},
+        {"name": "PhiPhi",              "nick": "Phi",     "color": "#ffffff"},
+        {"name": "Shigure",             "nick": "Shg",     "color": "#ffffff"},
+        {"name": "-trueDan-",           "nick": "Dan",     "color": "#ffffff"},
+        {"name": "UltimateEpicFailz",   "nick": "UEF",     "color": "#ff2222"},
+        {"name": "Xaftz",               "nick": "Xaf",     "color": "#ff8800"}
+    ]
+}

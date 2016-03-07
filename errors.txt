@@ -2,8 +2,12 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 15: expected statement.
-    iamge shigure draw yandere = im.FactorScale("shigure2_yandere.png", 1.5)
-                               ^
+File "game/script.rpy", line 32: expected statement.
+    day = 0
+        ^
+
+File "game/script.rpy", line 35: expected statement.
+    day += _return
+         ^
 
 Ren'Py Version: Ren'Py 6.99.8.959
