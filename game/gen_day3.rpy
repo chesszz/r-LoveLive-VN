@@ -1,2 +1,3 @@
 label gen_day3:
-    Ins "This is day 3"
+    Shg "I love you back!"
+    "[attr_mel] [attr_shg]"
