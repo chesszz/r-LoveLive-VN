@@ -17,8 +17,8 @@ init -1 python hide:
 
     ## These control the width and height of the screen.
 
-    config.screen_width = 800
-    config.screen_height = 600
+    config.screen_width = 1024
+    config.screen_height = 768
 
     ## This controls the title of the window, when Ren'Py is
     ## running in a window.
@@ -41,16 +41,15 @@ init -1 python hide:
 
     theme.tv(
         ## Theme: TV
-        ## Color scheme: Basic Blue
 
         ## The color of an idle widget face.
-        widget = "#003c78",
+        widget = "#ff00bf",
 
         ## The color of a focused widget face.
-        widget_hover = "#0050a0",
+        widget_hover = "#dd0000",
 
         ## The color of the text in a widget.
-        widget_text = "#c8ffff",
+        widget_text = "#ffffff",
 
         ## The color of the text in a selected widget. (For
         ## example, the current value of a preference.)
@@ -66,21 +65,21 @@ init -1 python hide:
         label = "#ffffff",
 
         ## The color of a frame containing widgets.
-        frame = "#6496c8",
+        frame = "#ff0000",
 
         ## The background of the main menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        mm_root = "#dcebff",
+        mm_root = "images/bg/main_bg.jpg",
 
         ## The background of the game menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        gm_root = "#dcebff",
+        gm_root = "images/bg/classroom.png",
 
         ## If this is True, the in-game window is rounded. If False,
         ## the in-game window is square.
-        rounded_window = False,
+        rounded_window = True,
 
         ## And we're done with the theme. The theme will customize
         ## various styles, so if we want to change them, we should
@@ -96,29 +95,47 @@ init -1 python hide:
     ## are the size of the left/right and top/bottom borders,
     ## respectively.
 
-    # style.window.background = Frame("frame.png", 12, 12)
+    style.window.background = Frame("images/ui/textbox.png", 0, 0)
 
     ## Margin is space surrounding the window, where the background
     ## is not drawn.
 
-    # style.window.left_margin = 6
-    # style.window.right_margin = 6
-    # style.window.top_margin = 6
-    # style.window.bottom_margin = 6
+    style.window.left_margin = 0
+    style.window.right_margin = 0
+    style.window.top_margin = 6
+    style.window.bottom_margin = 0
 
     ## Padding is space inside the window, where the background is
     ## drawn.
 
-    # style.window.left_padding = 6
-    # style.window.right_padding = 6
-    # style.window.top_padding = 6
-    # style.window.bottom_padding = 6
+    style.window.left_padding = 128
+    style.window.right_padding = 72
+    style.window.top_padding = 24
+    style.window.bottom_padding = 24
 
     ## This is the minimum height of the window, including the margins
     ## and padding.
 
-    # style.window.yminimum = 250
+    style.window.yminimum = 150
 
+    #########################################
+
+    ##Customization of the name box if show_two_window = True
+    
+    style.say_who_window.background = Frame("images/ui/charbox.png", 0, 0)
+
+    style.say_who_window.xalign = 0.0
+    style.say_who_window.yalign = 1.0
+
+    style.say_who_window.xpos = 50 
+
+    style.say_who_window.left_padding = 80
+    style.say_who_window.top_padding = 5
+    style.say_who_window.right_padding = 5
+    style.say_who_window.bottom_padding = 5
+
+    style.say_who_window.xminimum = 250
+    style.say_who_window.yminimum = 20 
 
     #########################################
     ## This lets you change the placement of the main menu.
@@ -278,7 +295,7 @@ init -1 python hide:
 
     ## The default text speed in characters per second. 0 is infinite.
 
-    config.default_text_cps = 0
+    config.default_text_cps = 80
 
     ## The default auto-forward time setting.
 

@@ -186,8 +186,8 @@ screen main_menu():
     # The main menu buttons.
     frame:
         style_group "mm"
-        xalign .98
-        yalign .98
+        xalign .52
+        yalign .95
 
         has vbox
 
@@ -559,3 +559,30 @@ init -2:
         selected_hover_color "#cc0"
         insensitive_color "#4448"
 
+#######################################################
+#  Define how the calendar should look, using Ren'Py's Screen Language.
+#  This section would normally be placed in screens.rpy, but if you're
+#  me, for the moment you'd rather have something to copy-paste, and test, and play around with.
+screen calendar(day, month, day_name):
+    
+    # Don't stop the user from interacting with other things - this screen is just showing stuff.
+    modal False
+    
+    # The section of screen to which we'll place the rest.
+    frame:
+        xalign 1.0    # Place in the upper-right corner.
+        yalign 0.0    #
+        xsize 100     # Make it 100x100 pixels.
+        ysize 100     # 
+        xmargin .05   # Leave some transparent space around the box.
+        ymargin .05   #
+        xpadding .15  # Leave some unused space between the box and its contents.
+        ypadding .1  # 
+
+        vbox:  # Arranges the things in it vertically.
+            text day size 60 xalign 0.5   # Big text with the date in center of the box.
+            text month size 28 xalign 0.5  # Smallish texts with monthname and year in the center of the box.
+            text day_name size 16 xalign 0.5
+            
+
+#######################################################

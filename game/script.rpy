@@ -25,6 +25,13 @@ init python:
         import json
         return json.load(renpy.file(pathname))     
 
+    def update_calendar(day, skip):
+        new_day_int = int(day) + skip
+        new_day = str(new_day_int)
+        new_day_name = day_name_dict[str(new_day_int % 7)]
+
+        return (new_day, new_day_name)
+
     # Registers all images in the images folder
     import_images()
 
@@ -34,17 +41,24 @@ init python:
     # Initialises the list of characters with their names and color
     char_list = init_data["chars"]
     for char in char_list: 
-        exec("{0} = Character('{1}', color='{2}')".format(char["nick"], char["name"], char["color"]))
+        setattr(store, char["nick"], Character(char["name"], color=char["color"], show_two_window=True))
 
     # Initialises the list of attractions
     # Cannot use a dict/list because Renpy thinks that it is the same dictionary when we update it 
     # and so doesn't init it again (I think)
     attr_mel = 0
     attr_shg = 0
-
+    
+    # Initialises the calendar
+    day = "1"
+    month = "April"
+    day_name_dict = {"0":"SUN", "1":"MON", "2":"TUE", "3":"WED", "4":"THU", "5":"FRI", "6":"SAT"}
+    day_name = day_name_dict[day]
 
 # The game starts here.
 label start:
+    show screen calendar(day, month, day_name)
+    show classroom
 
     call gen_day1
     if _return == "Mel":
