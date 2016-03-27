@@ -1,6 +1,9 @@
+# Remember that at the start of every day, we need to update the date! 
+# And then re-show the calendar to update the visuals! 
+
 label gen_day2:
-    $ day, day_name = update_calendar(day, 1)
-    show screen calendar(day, month, day_name)
+    $ date, day_name = update_calendar_date(new_date=2)
+    show screen calendar(date, month, day_name)
     
     Mel "I hate you!"
-    "[attr_mel] [attr_shg]"
+    "Attraction to Melodii: [attr_mel]\nAttraction to Shigure: [attr_shg]"

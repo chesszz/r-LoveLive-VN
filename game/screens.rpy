@@ -186,8 +186,8 @@ screen main_menu():
     # The main menu buttons.
     frame:
         style_group "mm"
-        xalign .52
-        yalign .95
+        xalign .52 # MODIFIED
+        yalign .95 # MODIFIED
 
         has vbox
 
@@ -559,6 +559,7 @@ init -2:
         selected_hover_color "#cc0"
         insensitive_color "#4448"
 
+# MODIFIED
 #######################################################
 #  Define how the calendar should look, using Ren'Py's Screen Language.
 #  This section would normally be placed in screens.rpy, but if you're

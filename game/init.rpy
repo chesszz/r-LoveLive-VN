@@ -1,5 +1,4 @@
-﻿# You can place the script of your game in this file.
-
+﻿#########################################################################################
 init python:
 
     # Searches through all images in the images/ folder with the desired formats
@@ -21,54 +20,46 @@ init python:
             renpy.image(img_desc, filename)
 
     # Gets the json file and loads it
-    def import_init_data(pathname="init_data.json"):
+    def import_init_data(pathname):
         import json
-        return json.load(renpy.file(pathname))     
+        return json.load(renpy.file(pathname))
 
-    def update_calendar(day, skip):
-        new_day_int = int(day) + skip
-        new_day = str(new_day_int)
-        new_day_name = day_name_dict[str(new_day_int % 7)]
+    # Update the date by skip number of days
+    def update_calendar_skip(curr_date, skip=1):
+        new_date_int = int(curr_date) + skip
+        new_date = str(new_date_int)
+        new_day_name = day_name_dict[str(new_date_int % 7)]
+        return (new_date, new_day_name)
 
-        return (new_day, new_day_name)
+    # Update the date by explicitly having the date
+    def update_calendar_date(new_date):
+        return (str(new_date), day_name_dict[str(new_date % 7)])
 
     # Registers all images in the images folder
     import_images()
 
-    # Imprts the json data file
-    init_data = import_init_data()
-
+    # Imports the json data file
+    init_data = import_init_data("init_data.json")
     # Initialises the list of characters with their names and color
+    # store is the default namespace in which we save variables
     char_list = init_data["chars"]
     for char in char_list: 
         setattr(store, char["nick"], Character(char["name"], color=char["color"], show_two_window=True))
 
-    # Initialises the list of attractions
+    # Initialises the attraction variables
     # Cannot use a dict/list because Renpy thinks that it is the same dictionary when we update it 
     # and so doesn't init it again (I think)
     attr_mel = 0
     attr_shg = 0
     
     # Initialises the calendar
-    day = "1"
+    date = "1"
     month = "April"
     day_name_dict = {"0":"SUN", "1":"MON", "2":"TUE", "3":"WED", "4":"THU", "5":"FRI", "6":"SAT"}
-    day_name = day_name_dict[day]
+    day_name = day_name_dict[date]
 
-# The game starts here.
-label start:
-    show screen calendar(day, month, day_name)
-    show classroom
+    style.default.font = "fonts/MotoyaLMaru.ttf"
 
-    call gen_day1
-    if _return == "Mel":
-        $ attr_mel += 1
-    else:
-        $ attr_shg += 1
+#########################################################################################
 
-    if attr_mel > 0:
-        call gen_day2
-    else:
-        call gen_day3
 
-    return

@@ -91,49 +91,48 @@ init -1 python hide:
     ## These settings let you customize the window containing the
     ## dialogue and narration, by replacing it with an image.
 
-    ## The background of the window. In a Frame, the two numbers
-    ## are the size of the left/right and top/bottom borders,
-    ## respectively.
+    ## The background of the window.
 
+    ## In a Frame, the two numbers are the size of the left/right and top/bottom borders respectively.
     style.window.background = Frame("images/ui/textbox.png", 0, 0)
 
-    ## Margin is space surrounding the window, where the background
-    ## is not drawn.
-
+    ## Margin is space between the box and surrounding elements outside
     style.window.left_margin = 0
     style.window.right_margin = 0
     style.window.top_margin = 6
     style.window.bottom_margin = 0
 
-    ## Padding is space inside the window, where the background is
-    ## drawn.
-
+    ## Padding is the space between the text inside and the edges of the box
     style.window.left_padding = 128
     style.window.right_padding = 72
     style.window.top_padding = 24
     style.window.bottom_padding = 24
 
-    ## This is the minimum height of the window, including the margins
-    ## and padding.
-
+    ## This is the minimum height of the window, including the margins and padding.
     style.window.yminimum = 150
 
     #########################################
 
-    ##Customization of the name box if show_two_window = True
-    
+    ##Customization of the name box that shows character names
+
+    ## In a Frame, the two numbers are the size of the left/right and top/bottom borders respectively.
     style.say_who_window.background = Frame("images/ui/charbox.png", 0, 0)
 
+    ## Align 0.0 for x means all the way to the left, 1.0 means all the way to the right
+    ## Align 0.0 for y means all the on top, 1.0 means all the way below
     style.say_who_window.xalign = 0.0
     style.say_who_window.yalign = 1.0
 
+    ## Use xpos as fine control to push the box a bit more to the right
     style.say_who_window.xpos = 50 
 
+    ## Padding is the space between the text inside and the edges of the box
     style.say_who_window.left_padding = 80
     style.say_who_window.top_padding = 5
     style.say_who_window.right_padding = 5
     style.say_who_window.bottom_padding = 5
 
+    ## This is the minimum height/wdith of the window, including the margins and padding.
     style.say_who_window.xminimum = 250
     style.say_who_window.yminimum = 20 
 
